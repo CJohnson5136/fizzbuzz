@@ -8,6 +8,7 @@ var tempArray = [];
 var i = 2;
 var x;
 var prime;
+var prime2;
 var count = 0;
 var print;
 
@@ -41,8 +42,10 @@ for (prime in primeArray) {
     tempArray = primeArray.slice(0);
     while (fizzBuzzArray[prime] * tempArray[0] <= maxNum) {
         for (i in tempArray) {
-            if (fizzBuzzArray[prime] * tempArray[i] <= maxNum) {
-                fizzBuzzArray[fizzBuzzArray[prime] * tempArray[i] - 1] = fizzBuzzArray[prime] * tempArray[i];
+            for (prime2 in primeArray) {
+                if (fizzBuzzArray[prime2] * tempArray[i] <= maxNum) {
+                    fizzBuzzArray[fizzBuzzArray[prime2] * tempArray[i] - 1] = fizzBuzzArray[prime2] * tempArray[i];
+                }
             }
             tempArray[i] = fizzBuzzArray[prime] * tempArray[i];
         }
