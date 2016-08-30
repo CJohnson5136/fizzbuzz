@@ -35,9 +35,9 @@ for (print in primeArray) {
 }
 
 /*For each prime in primeArray, takes it times all other primes in the array,
-then times all values received from that by the same prime until the smallest
-number received from this multiplication is greater than maxNum, adding each
-number received that is smaller than maxNum to the array to be printed*/
+then times all values received from that by all primes in primeArray until the
+smallest number received from this multiplication is greater than maxNum, adding
+each number received that is smaller than maxNum to the array to be printed*/
 for (prime in primeArray) {
     tempArray = primeArray.slice(0);
     while (fizzBuzzArray[prime] * tempArray[0] <= maxNum) {
